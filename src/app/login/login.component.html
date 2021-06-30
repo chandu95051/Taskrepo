@@ -1,0 +1,61 @@
+<body>
+<div class="container">
+    <div class="login-box">
+        <div class="left"></div>
+        <div class="right">
+    <h2 >Login Here!</h2>
+
+
+<form  #l="ngForm">
+    <input type="email" placeholder="Username"class="form-control" name="email"#email="ngModel"[ngModel] required email>
+         <div class="alert alert-danger" *ngIf="email.errors?.required&&email.touched">
+             Email is required
+          </div>
+         <div class="alert alert-danger"*ngIf=email.errors?.email&&email.touched>
+              Please Enter Email in correct Format 
+         </div>
+
+        <br>
+
+
+
+
+    <input type="password"placeholder="Password"class="form-control"name="pass"#pass="ngModel"[ngModel] required minlength="6">
+      
+      <div class="alert alert-danger"*ngIf="pass.errors?.required&&pass.touched">
+           Password is required
+        </div>
+       <div class="alert alert-danger"*ngIf="pass.errors?.minlength&&pass.touched">
+           Password must be atleast 6 letters
+       </div> 
+
+</form><br>
+<button class="btn btn-primary"[disabled]="!l.valid"(click)='login(l)'>Submit</button>
+
+</div>
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

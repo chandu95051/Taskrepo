@@ -1,0 +1,24 @@
+
+<div class="container mt-5">
+    <div class="body">
+       <div class="row">
+         
+           <div class="col-md-3 col-sm-3"*ngFor="let R of results">
+              <div class="card-header bg-light" >
+                  <div class="row align-items-center">
+                    <img class="card-img-top" src="{{R.product_image}}" alt="Card image cap"style="width: 11rem;">
+                   </div>
+                      <div class="card-body">
+                        <h5 class="card-title">{{R.product_title}}</h5>
+                        <h4 class="card-title">{{R.product_lowest_price}}</h4>
+                        <a href="{{R.product_link}}">Read full product list</a>
+
+                       
+
+                </div>
+              </div>
+             
+         </div>
+         </div>
+</div>
+</div>
